@@ -1,0 +1,221 @@
+/* Styles de base */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: Arial, sans-serif;
+}
+
+body {
+  background-color: #f4f7fa;
+  background-image: url('../images/moving-forward-bus-travels-on-road-embracing-travel-time-ambiance-ai-generated-photo.jpg');
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-attachment: fixed;
+  color: #ffffff;
+  line-height: 1.6;
+  padding: 20px;
+}
+
+h1, h2 {
+  text-align: center;
+  color: #2c3e50;
+}
+
+h1 {
+  margin-bottom: 20px;
+}
+
+/* Formulaire d'ajout de trajet */
+form {
+  background: #fff;
+  padding: 20px;
+  margin-bottom: 30px;
+  border-radius: 8px;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+  background: rgba(255, 255, 255, 0.3) 
+}
+
+form label {
+  font-size: 16px;
+  margin-bottom: 8px;
+  display: block;
+}
+
+form input, form button {
+  width: 100%;
+  padding: 10px;
+  margin: 10px 0;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  font-size: 16px;
+}
+
+form button {
+  background-color: #2ecc71;
+  color: white;
+  border: none;
+  cursor: pointer;
+  font-size: 18px;
+}
+
+form button:hover {
+  background-color: #27ae60;
+}
+
+/* Tableau des trajets et réservations */
+table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 30px;
+  color: black;
+}
+
+table th, table td {
+  padding: 12px;
+  text-align: left;
+  border-bottom: 1px solid #ddd;
+}
+
+table th {
+  background-color: #2980b9;
+  color: white;
+}
+
+table td {
+  background-color: #ecf0f1;
+}
+
+table tr:hover {
+  background-color: #f1f1f1;
+}
+
+table td, table th {
+  font-size: 16px;
+}
+
+/* Tableau des réservations */
+table tbody tr:nth-child(even) {
+  background-color: #f9f9f9;
+}
+
+table tbody tr:nth-child(odd) {
+  background-color: #ffffff;
+}
+
+/* Message d'alerte pour les réservations */
+.message {
+  text-align: center;
+  font-size: 18px;
+  color: #e74c3c;
+  margin-top: 20px;
+}
+
+/* Style pour les boutons d'actions sur les réservations */
+button.reserve {
+  background-color: #3498db;
+  color: white;
+  border: none;
+  padding: 10px 15px;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+button.reserve:hover {
+  background-color: #2980b9;
+}
+
+button.cancel {
+  background-color: #e74c3c;
+  color: white;
+  border: none;
+  padding: 10px 15px;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+button.cancel:hover {
+  background-color: #c0392b;
+}
+
+/* Styles de la page de confirmation */
+.container {
+  width: 80%;
+  margin: 50px auto;
+  padding: 20px;
+  background-color: #fff;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+  border-radius: 8px;
+}
+
+h1 {
+  text-align: center;
+  color: #2c3e50;
+  margin-bottom: 20px;
+}
+
+table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 20px;
+}
+
+table th, table td {
+  padding: 12px;
+  text-align: left;
+  border-bottom: 1px solid #ddd;
+}
+
+table th {
+  background-color: #2980b9;
+  color: white;
+}
+
+table td {
+  background-color: #ecf0f1;
+}
+
+table tr:hover {
+  background-color: #f1f1f1;
+}
+
+table td, table th {
+  font-size: 16px;
+}
+
+button {
+  display: block;
+  width: 100%;
+  padding: 12px;
+  margin: 20px 0;
+  font-size: 18px;
+  background-color: #3498db;
+  color: white;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+button:hover {
+  background-color: #2980b9;
+}
+
+/* Responsivité */
+@media (max-width: 768px) {
+  table th, table td {
+    font-size: 14px;
+    padding: 8px;
+  }
+
+  button {
+    font-size: 16px;
+  }
+
+  h1, h2 {
+    font-size: 22px;
+  }
+}
+/* Espacement entre chaque trajet dans l'admin */
+ul li {
+  margin-bottom: 30px; /* Ajouter un espace de 30px entre chaque trajet */
+}

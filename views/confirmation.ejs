@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Confirmation de réservation</title>
+    <link rel="stylesheet" href="/css/styles.css">
+</head>
+<body>
+    <h1>Confirmation de Réservation</h1>
+    <p class="message">Merci pour votre réservation, <%= customerName %> !</p>
+
+    <h2>Détails du Ticket</h2>
+    <table>
+        <tr>
+            <th>Nom du passager :</th>
+            <td><%= customerName %></td>
+        </tr>
+        <tr>
+            <th>Adresse e-mail :</th>
+            <td><%= customerEmail %></td>
+        </tr>
+        <tr>
+            <th>Téléphone :</th>
+            <td><%= customerPhone %></td>
+        </tr>
+        <tr>
+            <th>Montant payé :</th>
+            <td><%= paymentAmount %> DT</td>
+        </tr>
+        <tr>
+            <th>Date de réservation :</th>
+            <td><%= new Date().toLocaleDateString('fr-FR') %></td>
+        </tr>
+        <tr>
+            <th>Date et Heure de départ :</th>
+            <td><%= new Date(departureTime).toLocaleString('fr-FR') %></td>
+        </tr>
+        <tr>
+            <th>Date et Heure d'arrivée :</th>
+            <td><%= new Date(arrivalTime).toLocaleString('fr-FR') %></td>
+        </tr>
+        <tr>
+            <th>Code de ticket :</th>
+            <td><%= ticketCode %></td> <!-- Code de ticket aléatoire -->
+        </tr>
+    </table>
+
+    <button onclick="window.print()" class="reserve">Imprimer le ticket</button>
+</body>
+</html>

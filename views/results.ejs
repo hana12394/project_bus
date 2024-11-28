@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Résultats de la recherche</title>
+    <link rel="stylesheet" href="/css/styles.css">
+
+</head>
+<body>
+    <h1>Résultats de votre recherche</h1>
+    <ul>
+        <% routes.forEach(route => { %>
+            <li>
+                <strong>Trajet :</strong> <%= route.departure %> → <%= route.destination %><br>
+                <strong>Prix :</strong> <%= route.price %> TND<br>
+                <strong>Date de départ :</strong> <%= new Date(route.departureDate).toLocaleString() %><br>
+                <strong>Date d'arrivée :</strong> <%= new Date(route.arrivalDate).toLocaleString() %><br>
+                <strong>Places disponibles :</strong> <%= route.availableSeats %><br>
+                <% if (route.availableSeats > 0) { %>
+                    <form action="/reserve/<%= route._id %>" method="POST">
+                        <label for="customerName">Nom :</label>
+                        <input type="text" name="customerName" required><br>
+                        <label for="customerEmail">Email :</label>
+                        <input type="email" name="customerEmail" required><br>
+                        <label for="customerPhone">Téléphone :</label>
+                        <input type="text" name="customerPhone" required><br>
+                        <label for="paymentCardHolderName">Nom sur la carte :</label>
+                        <input type="text" name="paymentCardHolderName" required><br>
+                        <label for="paymentCardNumber">Numéro de carte bancaire :</label>
+                        <input type="text" name="paymentCardNumber" required><br>
+                        <label for="paymentCardCVC">Code CVC :</label>
+                        <input type="text" name="paymentCardCVC" required><br>
+                        <button type="submit">Réserver</button>
+                    </form>
+                <% } else { %>
+                    <p>Plus de places disponibles pour ce trajet.</p>
+                <% } %>
+            </li>
+        <% }) %>
+    </ul>
+</body>
+</html>
